@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Ultra Pizza Survey!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="background">
+    <main>
+      <h1 id="title" class="accent">Ultra Pizza Survey</h1>
+      <p id="description">The world needs to know your pizza preferences!</p>
+      <form id="survey-form" class="foreground">
+        <fieldset>
+          <label id="name-label" for="name">Name</label>
+          <input id="name" class="background styled-border input-field"
+            type="text" placeholder="Enter your name" required />
+          <label id="email-label" for="email">Email</label>
+          <input id="email" class="background styled-border input-field"
+            type="email" placeholder="Enter your email" required />
+        </fieldset>
+        <fieldset>
+          <legend>Do you like pizza?</legend>
+          <div class="radio-container">
+            <input 
+              id="like-pizza-yes" type="radio"
+              name="like-pizza" value="yes" checked />
+            <label for="like-pizza-yes">Yes</label>
+          </div>
+          <div class="radio-container">
+            <input
+              id="like-pizza-of-course" type="radio" 
+              name="like-pizza" value="of-course" />
+            <label for="like-pizza-of-course">Of course</label>
+          </div>
+          <div class="radio-container">
+            <input 
+              id="like-pizza-absolutely" type="radio"
+              name="like-pizza" value="absolutely" />
+            <label for="like-pizza-absolutely">Absolutely</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <label id="number-label" for="number">
+            How many slices can you eat in a sitting?
+          </label>
+          <!-- Pizza eating record:
+            A guy named Geoff ate 83 slices of pizza in ten minutes
+            (According to a less than 3 minutes Internet search, LOL) -->
+          <input id="number" class="background styled-border input-field"
+            type="number" min="1" max="83" placeholder="2" />
+          <label id="dropdown-label" for="dropdown">
+            What is the way you prefer to eat pizza?
+          </label>
+          <select id="dropdown" class="background styled-border input-field">
+            <option>Select an option</option>
+            <option>Alone</option>
+            <option>With friends</option>
+            <option>With family</option>
+            <option>With pets</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend class="legend-flavor">Which flavors do you like?</legend>
+          <div class="checkbox-container">
+            <input id="cheese" type="checkbox" name="flavors" value="cheese"/>
+            <label for="cheese">Cheese</label>
+          </div>
+          <div class="checkbox-container">
+            <input id="veggie" type="checkbox" name="flavors" value="veggie" /> 
+            <label for="veggie">Veggie</label>
+          </div>
+          <div class="checkbox-container">
+            <input id="pepperoni" type="checkbox" name="flavors" value="pepperoni" /> 
+            <label for="pepperoni">Pepperoni</label>
+          </div>
+          <div class="checkbox-container">
+            <input id="meat" type="checkbox" name="flavors" value="meat" /> 
+            <label for="meat">Meat</label>
+          </div>
+          <div class="checkbox-container">
+            <input id="margherita" type="checkbox" name="flavors" value="margherita" /> 
+            <label for="margherita">Margherita</label>
+          </div>
+          <div class="checkbox-container">
+            <input id="hawaiian" type="checkbox" name="flavors" value="hawaiian" /> 
+            <label for="hawaiian">Hawaiian</label>
+          </div>
+          <div class="checkbox-container">
+            <input id="buffalo" type="checkbox" name="flavors" value="buffalo" />
+            <label for="buffalo">Buffalo</label>
+          </div>
+          <div class="checkbox-container">
+            <input id="chocolate" type="checkbox" name="flavors" value="chocolate" />
+          <label for="chocolate">Chocolate</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <label for="pizza-rant">
+            Tell us why you think pizza is humankind's best invention:
+          </label>
+          <textarea id="pizza-rant" class="background styled-border input-field"
+            rows="3" cols="30"
+            placeholder="Because it unites the world..."></textarea>
+        </fieldset>
+        <button id="submit" class="background styled-border">Submit</button>
+      </form>
+    </main>
+  </body>
+</html>
